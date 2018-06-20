@@ -23,4 +23,13 @@
         Me.Close()
     End Sub
 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Fpemasok.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Fpembelian.Show()
+        Me.Hide()
+    End Sub
 End Class

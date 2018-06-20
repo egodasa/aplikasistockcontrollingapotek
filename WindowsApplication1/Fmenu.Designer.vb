@@ -28,6 +28,8 @@ Partial Class Fmenu
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button2
@@ -82,7 +84,7 @@ Partial Class Fmenu
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button7.Location = New System.Drawing.Point(445, 159)
+        Me.Button7.Location = New System.Drawing.Point(445, 243)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(104, 29)
         Me.Button7.TabIndex = 6
@@ -100,12 +102,44 @@ Partial Class Fmenu
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Menu Aplikasi"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Crimson
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(199, 155)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(167, 73)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Data Pemasok"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button4.Location = New System.Drawing.Point(382, 155)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(167, 73)
+        Me.Button4.TabIndex = 9
+        Me.Button4.Text = "Data Pembelian Stok"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Fmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.ClientSize = New System.Drawing.Size(561, 201)
+        Me.ClientSize = New System.Drawing.Size(561, 315)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button5)
@@ -123,4 +157,6 @@ Partial Class Fmenu
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class
