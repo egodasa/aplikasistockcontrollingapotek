@@ -243,13 +243,13 @@ Partial Class Ftransaksi
         'ObatToolStripMenuItem
         '
         Me.ObatToolStripMenuItem.Name = "ObatToolStripMenuItem"
-        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ObatToolStripMenuItem.Text = "Obat"
         '
         'JenisObatToolStripMenuItem
         '
         Me.JenisObatToolStripMenuItem.Name = "JenisObatToolStripMenuItem"
-        Me.JenisObatToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.JenisObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.JenisObatToolStripMenuItem.Text = "Jenis Obat"
         '
         'Bbatal
@@ -345,7 +345,7 @@ Partial Class Ftransaksi
         Me.Controls.Add(Me.GroupBox4)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Ftransaksi"
-        Me.Text = "Form Pemeriksaan"
+        Me.Text = "Form Transaksi"
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.Tjumlah, System.ComponentModel.ISupportInitialize).EndInit()

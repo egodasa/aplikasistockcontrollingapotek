@@ -24,6 +24,9 @@ Partial Class Fkelola_obat
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fkelola_obat))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Tstok_ubah = New System.Windows.Forms.NumericUpDown()
+        Me.Tstok = New System.Windows.Forms.NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Csatuan = New System.Windows.Forms.ComboBox()
         Me.Tnm_obat = New System.Windows.Forms.TextBox()
@@ -42,14 +45,11 @@ Partial Class Fkelola_obat
         Me.Bcancel = New System.Windows.Forms.Button()
         Me.Bdelete = New System.Windows.Forms.Button()
         Me.Bedit = New System.Windows.Forms.Button()
-        Me.Tstok = New System.Windows.Forms.NumericUpDown()
-        Me.Tstok_ubah = New System.Windows.Forms.NumericUpDown()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.Tstok_ubah, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tstok, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGobat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.Tstok, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tstok_ubah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -77,6 +77,34 @@ Partial Class Fkelola_obat
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ENTRI DATA OBAT"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(308, 109)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(153, 15)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "Tambah/Kurangi Stok Obat"
+        '
+        'Tstok_ubah
+        '
+        Me.Tstok_ubah.Enabled = False
+        Me.Tstok_ubah.Location = New System.Drawing.Point(467, 109)
+        Me.Tstok_ubah.Maximum = New Decimal(New Integer() {1874919424, 2328306, 0, 0})
+        Me.Tstok_ubah.Minimum = New Decimal(New Integer() {1569325056, 23283064, 0, -2147483648})
+        Me.Tstok_ubah.Name = "Tstok_ubah"
+        Me.Tstok_ubah.Size = New System.Drawing.Size(120, 23)
+        Me.Tstok_ubah.TabIndex = 17
+        '
+        'Tstok
+        '
+        Me.Tstok.Location = New System.Drawing.Point(125, 108)
+        Me.Tstok.Maximum = New Decimal(New Integer() {1215752192, 23, 0, 0})
+        Me.Tstok.Name = "Tstok"
+        Me.Tstok.Size = New System.Drawing.Size(120, 23)
+        Me.Tstok.TabIndex = 16
         '
         'Label1
         '
@@ -196,7 +224,7 @@ Partial Class Fkelola_obat
         Me.Bsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bsave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsave.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bsave.Location = New System.Drawing.Point(6, 18)
+        Me.Bsave.Location = New System.Drawing.Point(21, 18)
         Me.Bsave.Name = "Bsave"
         Me.Bsave.Size = New System.Drawing.Size(75, 23)
         Me.Bsave.TabIndex = 1
@@ -210,7 +238,7 @@ Partial Class Fkelola_obat
         Me.Bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bexit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bexit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bexit.Location = New System.Drawing.Point(530, 363)
+        Me.Bexit.Location = New System.Drawing.Point(498, 18)
         Me.Bexit.Name = "Bexit"
         Me.Bexit.Size = New System.Drawing.Size(75, 23)
         Me.Bexit.TabIndex = 2
@@ -222,12 +250,13 @@ Partial Class Fkelola_obat
         Me.GroupBox2.BackColor = System.Drawing.Color.MintCream
         Me.GroupBox2.Controls.Add(Me.Bcancel)
         Me.GroupBox2.Controls.Add(Me.Bdelete)
+        Me.GroupBox2.Controls.Add(Me.Bexit)
         Me.GroupBox2.Controls.Add(Me.Bedit)
         Me.GroupBox2.Controls.Add(Me.Bsave)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 345)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(365, 49)
+        Me.GroupBox2.Size = New System.Drawing.Size(593, 49)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "PROSES"
@@ -240,7 +269,7 @@ Partial Class Fkelola_obat
         Me.Bcancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bcancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bcancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bcancel.Location = New System.Drawing.Point(279, 18)
+        Me.Bcancel.Location = New System.Drawing.Point(370, 18)
         Me.Bcancel.Name = "Bcancel"
         Me.Bcancel.Size = New System.Drawing.Size(75, 23)
         Me.Bcancel.TabIndex = 5
@@ -255,7 +284,7 @@ Partial Class Fkelola_obat
         Me.Bdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bdelete.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bdelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bdelete.Location = New System.Drawing.Point(188, 18)
+        Me.Bdelete.Location = New System.Drawing.Point(247, 18)
         Me.Bdelete.Name = "Bdelete"
         Me.Bdelete.Size = New System.Drawing.Size(75, 23)
         Me.Bdelete.TabIndex = 4
@@ -270,59 +299,30 @@ Partial Class Fkelola_obat
         Me.Bedit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bedit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bedit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bedit.Location = New System.Drawing.Point(98, 18)
+        Me.Bedit.Location = New System.Drawing.Point(137, 18)
         Me.Bedit.Name = "Bedit"
         Me.Bedit.Size = New System.Drawing.Size(75, 23)
         Me.Bedit.TabIndex = 3
         Me.Bedit.Text = "UBAH"
         Me.Bedit.UseVisualStyleBackColor = False
         '
-        'Tstok
-        '
-        Me.Tstok.Location = New System.Drawing.Point(125, 108)
-        Me.Tstok.Maximum = New Decimal(New Integer() {1215752192, 23, 0, 0})
-        Me.Tstok.Name = "Tstok"
-        Me.Tstok.Size = New System.Drawing.Size(120, 23)
-        Me.Tstok.TabIndex = 16
-        '
-        'Tstok_ubah
-        '
-        Me.Tstok_ubah.Enabled = False
-        Me.Tstok_ubah.Location = New System.Drawing.Point(467, 109)
-        Me.Tstok_ubah.Maximum = New Decimal(New Integer() {1874919424, 2328306, 0, 0})
-        Me.Tstok_ubah.Minimum = New Decimal(New Integer() {1569325056, 23283064, 0, -2147483648})
-        Me.Tstok_ubah.Name = "Tstok_ubah"
-        Me.Tstok_ubah.Size = New System.Drawing.Size(120, 23)
-        Me.Tstok_ubah.TabIndex = 17
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(308, 109)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(153, 15)
-        Me.Label7.TabIndex = 18
-        Me.Label7.Text = "Tambah/Kurangi Stok Obat"
-        '
         'Fkelola_obat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.ClientSize = New System.Drawing.Size(983, 446)
+        Me.ClientSize = New System.Drawing.Size(619, 404)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Bexit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Fkelola_obat"
         Me.Text = "Kelola Obat"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.Tstok_ubah, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tstok, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGobat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.Tstok, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tstok_ubah, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
