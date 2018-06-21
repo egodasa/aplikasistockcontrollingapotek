@@ -28,9 +28,7 @@ Partial Class Fpembelian
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.JenisObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PemasokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DaftarPembelianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Bexit = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Tharga = New System.Windows.Forms.NumericUpDown()
@@ -47,7 +45,6 @@ Partial Class Fpembelian
         Me.Bhapus_obat = New System.Windows.Forms.Button()
         Me.DGobat_beli = New System.Windows.Forms.DataGridView()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.DaftarPembelianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.Tharga, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,28 +105,16 @@ Partial Class Fpembelian
         '
         'DataToolStripMenuItem
         '
-        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObatToolStripMenuItem, Me.JenisObatToolStripMenuItem, Me.PemasokToolStripMenuItem, Me.DaftarPembelianToolStripMenuItem})
+        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarPembelianToolStripMenuItem})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
         Me.DataToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.DataToolStripMenuItem.Text = "Data"
         '
-        'ObatToolStripMenuItem
+        'DaftarPembelianToolStripMenuItem
         '
-        Me.ObatToolStripMenuItem.Name = "ObatToolStripMenuItem"
-        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ObatToolStripMenuItem.Text = "Obat"
-        '
-        'JenisObatToolStripMenuItem
-        '
-        Me.JenisObatToolStripMenuItem.Name = "JenisObatToolStripMenuItem"
-        Me.JenisObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.JenisObatToolStripMenuItem.Text = "Jenis Obat"
-        '
-        'PemasokToolStripMenuItem
-        '
-        Me.PemasokToolStripMenuItem.Name = "PemasokToolStripMenuItem"
-        Me.PemasokToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PemasokToolStripMenuItem.Text = "Pemasok"
+        Me.DaftarPembelianToolStripMenuItem.Name = "DaftarPembelianToolStripMenuItem"
+        Me.DaftarPembelianToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.DaftarPembelianToolStripMenuItem.Text = "Daftar Pembelian"
         '
         'Bexit
         '
@@ -319,12 +304,6 @@ Partial Class Fpembelian
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "Nama Obat"
         '
-        'DaftarPembelianToolStripMenuItem
-        '
-        Me.DaftarPembelianToolStripMenuItem.Name = "DaftarPembelianToolStripMenuItem"
-        Me.DaftarPembelianToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.DaftarPembelianToolStripMenuItem.Text = "Daftar Pembelian"
-        '
         'Fpembelian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -352,9 +331,6 @@ Partial Class Fpembelian
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents KeluarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents JenisObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PemasokToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Bexit As System.Windows.Forms.Button
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents Lstok As System.Windows.Forms.Label

@@ -55,27 +55,24 @@ Partial Class Fdatar_pembelian
         Me.Ltotal.AutoSize = True
         Me.Ltotal.Location = New System.Drawing.Point(10, 80)
         Me.Ltotal.Name = "Ltotal"
-        Me.Ltotal.Size = New System.Drawing.Size(40, 13)
+        Me.Ltotal.Size = New System.Drawing.Size(0, 13)
         Me.Ltotal.TabIndex = 3
-        Me.Ltotal.Text = "awswa"
         '
         'Ltgl_transaksi
         '
         Me.Ltgl_transaksi.AutoSize = True
         Me.Ltgl_transaksi.Location = New System.Drawing.Point(10, 54)
         Me.Ltgl_transaksi.Name = "Ltgl_transaksi"
-        Me.Ltgl_transaksi.Size = New System.Drawing.Size(34, 13)
+        Me.Ltgl_transaksi.Size = New System.Drawing.Size(0, 13)
         Me.Ltgl_transaksi.TabIndex = 2
-        Me.Ltgl_transaksi.Text = "swaw"
         '
         'Lid_transaksi
         '
         Me.Lid_transaksi.AutoSize = True
         Me.Lid_transaksi.Location = New System.Drawing.Point(10, 29)
         Me.Lid_transaksi.Name = "Lid_transaksi"
-        Me.Lid_transaksi.Size = New System.Drawing.Size(25, 13)
+        Me.Lid_transaksi.Size = New System.Drawing.Size(0, 13)
         Me.Lid_transaksi.TabIndex = 1
-        Me.Lid_transaksi.Text = "sws"
         '
         'DGdetail
         '

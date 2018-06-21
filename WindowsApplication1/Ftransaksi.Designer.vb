@@ -40,8 +40,7 @@ Partial Class Ftransaksi
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.JenisObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DaftarTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Bbatal = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Tkembalian = New System.Windows.Forms.TextBox()
@@ -49,7 +48,6 @@ Partial Class Ftransaksi
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Tdibayarkan = New System.Windows.Forms.NumericUpDown()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.DaftarTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox4.SuspendLayout()
         CType(Me.Tjumlah, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGobat_beli, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -236,22 +234,16 @@ Partial Class Ftransaksi
         '
         'DataToolStripMenuItem
         '
-        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObatToolStripMenuItem, Me.JenisObatToolStripMenuItem, Me.DaftarTransaksiToolStripMenuItem})
+        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarTransaksiToolStripMenuItem})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
         Me.DataToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.DataToolStripMenuItem.Text = "Data"
         '
-        'ObatToolStripMenuItem
+        'DaftarTransaksiToolStripMenuItem
         '
-        Me.ObatToolStripMenuItem.Name = "ObatToolStripMenuItem"
-        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
-        Me.ObatToolStripMenuItem.Text = "Obat"
-        '
-        'JenisObatToolStripMenuItem
-        '
-        Me.JenisObatToolStripMenuItem.Name = "JenisObatToolStripMenuItem"
-        Me.JenisObatToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
-        Me.JenisObatToolStripMenuItem.Text = "Jenis Obat"
+        Me.DaftarTransaksiToolStripMenuItem.Name = "DaftarTransaksiToolStripMenuItem"
+        Me.DaftarTransaksiToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.DaftarTransaksiToolStripMenuItem.Text = "Daftar Transaksi"
         '
         'Bbatal
         '
@@ -334,12 +326,6 @@ Partial Class Ftransaksi
         Me.Label26.TabIndex = 16
         Me.Label26.Text = "Dibayar"
         '
-        'DaftarTransaksiToolStripMenuItem
-        '
-        Me.DaftarTransaksiToolStripMenuItem.Name = "DaftarTransaksiToolStripMenuItem"
-        Me.DaftarTransaksiToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
-        Me.DaftarTransaksiToolStripMenuItem.Text = "Daftar Transaksi"
-        '
         'Ftransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -379,7 +365,6 @@ Partial Class Ftransaksi
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents KeluarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Bbatal As System.Windows.Forms.Button
     Friend WithEvents Ttotal_harga As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
@@ -391,6 +376,5 @@ Partial Class Ftransaksi
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Tdibayarkan As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents JenisObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DaftarTransaksiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

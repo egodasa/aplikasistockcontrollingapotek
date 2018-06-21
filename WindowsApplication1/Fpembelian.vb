@@ -61,15 +61,15 @@
         Me.Close()
     End Sub
 
-    Private Sub ObatToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ObatToolStripMenuItem.Click
+    Private Sub ObatToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Fkelola_obat.ShowDialog()
     End Sub
 
-    Private Sub JenisObatToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles JenisObatToolStripMenuItem.Click
+    Private Sub JenisObatToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Fjenis_obat.ShowDialog()
     End Sub
 
-    Private Sub PemasokToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PemasokToolStripMenuItem.Click
+    Private Sub PemasokToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Fpemasok.ShowDialog()
     End Sub
 
