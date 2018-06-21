@@ -30,9 +30,9 @@ Partial Class Fjenis_obat
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Bcancel = New System.Windows.Forms.Button()
         Me.Bdelete = New System.Windows.Forms.Button()
+        Me.Bexit = New System.Windows.Forms.Button()
         Me.Bedit = New System.Windows.Forms.Button()
         Me.Bsave = New System.Windows.Forms.Button()
-        Me.Bexit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGjobat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -111,7 +111,7 @@ Partial Class Fjenis_obat
         '
         'Bdelete
         '
-        Me.Bdelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Bdelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Bdelete.Enabled = False
         Me.Bdelete.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -123,6 +123,20 @@ Partial Class Fjenis_obat
         Me.Bdelete.TabIndex = 4
         Me.Bdelete.Text = "HAPUS"
         Me.Bdelete.UseVisualStyleBackColor = False
+        '
+        'Bexit
+        '
+        Me.Bexit.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Bexit.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Bexit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bexit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Bexit.Location = New System.Drawing.Point(381, 20)
+        Me.Bexit.Name = "Bexit"
+        Me.Bexit.Size = New System.Drawing.Size(75, 23)
+        Me.Bexit.TabIndex = 2
+        Me.Bexit.Text = "KELUAR"
+        Me.Bexit.UseVisualStyleBackColor = False
         '
         'Bedit
         '
@@ -141,7 +155,7 @@ Partial Class Fjenis_obat
         '
         'Bsave
         '
-        Me.Bsave.BackColor = System.Drawing.Color.DarkCyan
+        Me.Bsave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Bsave.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bsave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -152,20 +166,6 @@ Partial Class Fjenis_obat
         Me.Bsave.TabIndex = 1
         Me.Bsave.Text = "SIMPAN"
         Me.Bsave.UseVisualStyleBackColor = False
-        '
-        'Bexit
-        '
-        Me.Bexit.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Bexit.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Bexit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bexit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bexit.Location = New System.Drawing.Point(381, 20)
-        Me.Bexit.Name = "Bexit"
-        Me.Bexit.Size = New System.Drawing.Size(75, 23)
-        Me.Bexit.TabIndex = 2
-        Me.Bexit.Text = "KELUAR"
-        Me.Bexit.UseVisualStyleBackColor = False
         '
         'Fjenis_obat
         '

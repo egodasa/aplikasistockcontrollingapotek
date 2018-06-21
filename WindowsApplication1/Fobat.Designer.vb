@@ -219,7 +219,7 @@ Partial Class Fkelola_obat
         '
         'Bsave
         '
-        Me.Bsave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Bsave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Bsave.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bsave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -278,7 +278,7 @@ Partial Class Fkelola_obat
         '
         'Bdelete
         '
-        Me.Bdelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Bdelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Bdelete.Enabled = False
         Me.Bdelete.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat

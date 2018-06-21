@@ -4,7 +4,7 @@
     Dim DTobat As New DataTable
     Dim cari_obat As DataTable
     Dim total_harga As Integer = 0
-    Dim getDataBeli As String = "select * from daftar_obat_beli where `Id_Periksa` = '" & id_periksa & "'"
+    Dim getDataBeli As String = "select * from daftar_obat_beli where `Id_Transaksi` = '" & id_periksa & "'"
     Dim waktu_kb As String
     Sub resetTerapi()
         Call fetchComboboxData("select * from daftar_obat", Cobat, "Nama_Obat", "Id_Obat")
@@ -12,17 +12,16 @@
         data_obat = Cobat.DataSource
         Tjumlah.ResetText()
         Tjumlah.Maximum = 100000000
-        DGobat_beli.DataSource = fetchData("select * from daftar_obat_beli where `Id_Periksa` = '" & id_periksa & "'")
-        DGobat_beli.Columns("Id_Terapi").Visible = False
+        DGobat_beli.DataSource = fetchData("select * from daftar_obat_beli where `Id_Transaksi` = '" & id_periksa & "'")
         DGobat_beli.Columns("Id_Obat").Visible = False
-        DGobat_beli.Columns("Id_Periksa").Visible = False
+        DGobat_beli.Columns("Id_Transaksi").Visible = False
         DGobat_beli.Columns("Jumlah").ReadOnly = False
         Lstok.ResetText()
         If DGobat_beli.RowCount <> 0 Then
             For Each x As DataGridViewRow In DGobat_beli.Rows
                 If Not x.IsNewRow Then
                     If x.Cells(2).Value <> 0 Then
-                        runQuery("insert into tbl_terapi(id_obat, jumlah, id_periksa) values (" & x.Cells("id_obat").Value & "," & x.Cells("Jumlah").Value & ", " & id_periksa & ")")
+                        runQuery("insert into tbl_detail_transaksi(id_obat, jumlah, id_transaksi) values (" & x.Cells("id_obat").Value & "," & x.Cells("Jumlah").Value & ", " & id_periksa & ")")
                     End If
                 End If
             Next
@@ -30,11 +29,11 @@
     End Sub
     Sub resetId()
         id_periksa = DateTime.Now.ToString("ddMMyyhhmmssffff")
-        getDataBeli = "select * from daftar_obat_beli where `Id_Periksa` = '" & id_periksa & "'"
+        getDataBeli = "select * from daftar_obat_beli where `Id_Transaksi` = '" & id_periksa & "'"
     End Sub
     Sub resetTransaksi()
         If DGobat_beli.Rows.Count <> 0 Then
-            runQuery("delete from tbl_terapi where id_periksa = '" & id_periksa & "'")
+            runQuery("delete from tbl_detail_transaksi where id_transaksi = '" & id_periksa & "'")
         End If
     End Sub
     Sub resetPembayaran()
@@ -71,6 +70,7 @@
     End Sub
 
     Private Sub Bsimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bsimpan.Click
+        runQuery("insert into tbl_transaksi values ('" & id_periksa & "','" & DateTime.Now.ToString("yy-MM-dd hh:mm:ss") & "')")
         Call resetId()
         Call resetPembayaran()
         Call resetTerapi()
@@ -85,7 +85,7 @@
 
     Private Sub Btambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btambah.Click
         If Cobat.SelectedIndex <> -1 And Cobat.Text <> "" Then
-            runQuery("insert into tbl_terapi (id_obat, id_periksa, jumlah) values (" & Cobat.SelectedValue & ", '" & id_periksa & "', " & Tjumlah.Text & ")")
+            runQuery("insert into tbl_detail_transaksi (id_obat, id_transaksi, jumlah) values (" & Cobat.SelectedValue & ", '" & id_periksa & "', " & Tjumlah.Text & ")")
             DGobat_beli.DataSource = fetchData(getDataBeli)
             total_harga = 0
             For x As Integer = 0 To DGobat_beli.Rows.Count - 1
@@ -101,13 +101,13 @@
 
     Private Sub Fperiksa_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
         If DGobat_beli.Rows.Count > 0 Then
-            runQuery("delete from tbl_terapi where id_periksa = '" & id_periksa & "'")
+            runQuery("delete from tbl_detail_transaksi where id_transaksi = '" & id_periksa & "'")
         End If
     End Sub
 
     Private Sub Bhapus_obat_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bhapus_obat.Click
         Try
-            runQuery("delete from tbl_terapi where id_obat = " & DGobat_beli.CurrentRow.Cells("Id_Obat").Value & " and id_periksa = '" & id_periksa & "'")
+            runQuery("delete from tbl_detail_transaksi where id_obat = " & DGobat_beli.CurrentRow.Cells("Id_Obat").Value & " and id_transaksi = '" & id_periksa & "'")
             DGobat_beli.DataSource = fetchData(getDataBeli)
             total_harga = 0
             For x As Integer = 0 To DGobat_beli.Rows.Count - 1
@@ -160,7 +160,7 @@
 
     Private Sub Fperiksa_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         If DGobat_beli.Rows.Count > 0 Then
-            runQuery("delete from tbl_terapi where id_periksa = '" & id_periksa & "'")
+            runQuery("delete from tbl_detail_transaksi where id_transaksi = '" & id_periksa & "'")
         End If
     End Sub
 
@@ -170,5 +170,9 @@
 
     Private Sub JenisObatToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles JenisObatToolStripMenuItem.Click
         Fjenis_obat.ShowDialog()
+    End Sub
+
+    Private Sub DaftarTransaksiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DaftarTransaksiToolStripMenuItem.Click
+        Fdaftar_transaksi.ShowDialog()
     End Sub
 End Class

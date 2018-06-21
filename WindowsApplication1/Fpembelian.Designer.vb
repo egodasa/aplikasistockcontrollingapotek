@@ -30,8 +30,15 @@ Partial Class Fpembelian
         Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PemasokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Bexit = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Tharga = New System.Windows.Forms.NumericUpDown()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Ttotal_harga = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Cpemasok = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Lstok = New System.Windows.Forms.Label()
         Me.Tjumlah = New System.Windows.Forms.NumericUpDown()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -40,18 +47,12 @@ Partial Class Fpembelian
         Me.Bhapus_obat = New System.Windows.Forms.Button()
         Me.DGobat_beli = New System.Windows.Forms.DataGridView()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.PemasokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Cpemasok = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Ttotal_harga = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Tharga = New System.Windows.Forms.NumericUpDown()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DaftarPembelianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.Tharga, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tjumlah, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGobat_beli, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tharga, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Bbatal
@@ -65,7 +66,7 @@ Partial Class Fpembelian
         Me.Bbatal.Name = "Bbatal"
         Me.Bbatal.Size = New System.Drawing.Size(203, 28)
         Me.Bbatal.TabIndex = 30
-        Me.Bbatal.Text = "BATALKAN TRANSAKSI"
+        Me.Bbatal.Text = "BATALKAN PEMBELIAN"
         Me.Bbatal.UseVisualStyleBackColor = False
         '
         'Bsimpan
@@ -79,7 +80,7 @@ Partial Class Fpembelian
         Me.Bsimpan.Name = "Bsimpan"
         Me.Bsimpan.Size = New System.Drawing.Size(172, 28)
         Me.Bsimpan.TabIndex = 13
-        Me.Bsimpan.Text = "SIMPAN TRANSAKSI"
+        Me.Bsimpan.Text = "SIMPAN PEMBELIAN"
         Me.Bsimpan.UseVisualStyleBackColor = False
         '
         'MenuStrip1
@@ -88,7 +89,7 @@ Partial Class Fpembelian
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(587, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(580, 24)
         Me.MenuStrip1.TabIndex = 37
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -102,12 +103,12 @@ Partial Class Fpembelian
         'KeluarToolStripMenuItem
         '
         Me.KeluarToolStripMenuItem.Name = "KeluarToolStripMenuItem"
-        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.KeluarToolStripMenuItem.Text = "Keluar"
         '
         'DataToolStripMenuItem
         '
-        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObatToolStripMenuItem, Me.JenisObatToolStripMenuItem, Me.PemasokToolStripMenuItem})
+        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObatToolStripMenuItem, Me.JenisObatToolStripMenuItem, Me.PemasokToolStripMenuItem, Me.DaftarPembelianToolStripMenuItem})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
         Me.DataToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.DataToolStripMenuItem.Text = "Data"
@@ -123,6 +124,12 @@ Partial Class Fpembelian
         Me.JenisObatToolStripMenuItem.Name = "JenisObatToolStripMenuItem"
         Me.JenisObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.JenisObatToolStripMenuItem.Text = "Jenis Obat"
+        '
+        'PemasokToolStripMenuItem
+        '
+        Me.PemasokToolStripMenuItem.Name = "PemasokToolStripMenuItem"
+        Me.PemasokToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PemasokToolStripMenuItem.Text = "Pemasok"
         '
         'Bexit
         '
@@ -164,6 +171,66 @@ Partial Class Fpembelian
         Me.GroupBox4.TabIndex = 35
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "PEMBELIAN STOK OBAT"
+        '
+        'Tharga
+        '
+        Me.Tharga.Location = New System.Drawing.Point(363, 78)
+        Me.Tharga.Maximum = New Decimal(New Integer() {1410065408, 2, 0, 0})
+        Me.Tharga.Name = "Tharga"
+        Me.Tharga.Size = New System.Drawing.Size(188, 23)
+        Me.Tharga.TabIndex = 39
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(318, 78)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 15)
+        Me.Label2.TabIndex = 38
+        Me.Label2.Text = "Harga"
+        '
+        'Ttotal_harga
+        '
+        Me.Ttotal_harga.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ttotal_harga.Location = New System.Drawing.Point(120, 289)
+        Me.Ttotal_harga.Name = "Ttotal_harga"
+        Me.Ttotal_harga.ReadOnly = True
+        Me.Ttotal_harga.Size = New System.Drawing.Size(431, 23)
+        Me.Ttotal_harga.TabIndex = 37
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(5, 288)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(69, 15)
+        Me.Label13.TabIndex = 36
+        Me.Label13.Text = "Total Harga"
+        '
+        'Cpemasok
+        '
+        Me.Cpemasok.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.Cpemasok.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.Cpemasok.DisplayMember = "Nama Obat"
+        Me.Cpemasok.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cpemasok.FormattingEnabled = True
+        Me.Cpemasok.Location = New System.Drawing.Point(120, 22)
+        Me.Cpemasok.Name = "Cpemasok"
+        Me.Cpemasok.Size = New System.Drawing.Size(431, 23)
+        Me.Cpemasok.TabIndex = 35
+        Me.Cpemasok.ValueMember = "id_obat"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(9, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(90, 15)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "Nama Pemasok"
         '
         'Lstok
         '
@@ -252,77 +319,17 @@ Partial Class Fpembelian
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "Nama Obat"
         '
-        'PemasokToolStripMenuItem
+        'DaftarPembelianToolStripMenuItem
         '
-        Me.PemasokToolStripMenuItem.Name = "PemasokToolStripMenuItem"
-        Me.PemasokToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PemasokToolStripMenuItem.Text = "Pemasok"
-        '
-        'Cpemasok
-        '
-        Me.Cpemasok.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.Cpemasok.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.Cpemasok.DisplayMember = "Nama Obat"
-        Me.Cpemasok.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cpemasok.FormattingEnabled = True
-        Me.Cpemasok.Location = New System.Drawing.Point(120, 22)
-        Me.Cpemasok.Name = "Cpemasok"
-        Me.Cpemasok.Size = New System.Drawing.Size(431, 23)
-        Me.Cpemasok.TabIndex = 35
-        Me.Cpemasok.ValueMember = "id_obat"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 15)
-        Me.Label1.TabIndex = 34
-        Me.Label1.Text = "Nama Pemasok"
-        '
-        'Ttotal_harga
-        '
-        Me.Ttotal_harga.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ttotal_harga.Location = New System.Drawing.Point(120, 289)
-        Me.Ttotal_harga.Name = "Ttotal_harga"
-        Me.Ttotal_harga.ReadOnly = True
-        Me.Ttotal_harga.Size = New System.Drawing.Size(431, 23)
-        Me.Ttotal_harga.TabIndex = 37
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(5, 288)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(69, 15)
-        Me.Label13.TabIndex = 36
-        Me.Label13.Text = "Total Harga"
-        '
-        'Tharga
-        '
-        Me.Tharga.Location = New System.Drawing.Point(363, 78)
-        Me.Tharga.Maximum = New Decimal(New Integer() {1410065408, 2, 0, 0})
-        Me.Tharga.Name = "Tharga"
-        Me.Tharga.Size = New System.Drawing.Size(188, 23)
-        Me.Tharga.TabIndex = 39
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(318, 78)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 15)
-        Me.Label2.TabIndex = 38
-        Me.Label2.Text = "Harga"
+        Me.DaftarPembelianToolStripMenuItem.Name = "DaftarPembelianToolStripMenuItem"
+        Me.DaftarPembelianToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.DaftarPembelianToolStripMenuItem.Text = "Daftar Pembelian"
         '
         'Fpembelian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(587, 433)
+        Me.ClientSize = New System.Drawing.Size(580, 442)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Bexit)
         Me.Controls.Add(Me.GroupBox4)
@@ -332,9 +339,9 @@ Partial Class Fpembelian
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.Tharga, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tjumlah, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGobat_beli, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tharga, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -364,4 +371,5 @@ Partial Class Fpembelian
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Tharga As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents DaftarPembelianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

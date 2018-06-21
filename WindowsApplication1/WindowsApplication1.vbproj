@@ -97,10 +97,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="db.vb" />
+    <Compile Include="Fdaftar_transaksi.Designer.vb">
+      <DependentUpon>Fdaftar_transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fdaftar_transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fdatar_pembelian.Designer.vb">
+      <DependentUpon>Fdatar_pembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fdatar_pembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feoq.Designer.vb">
+      <DependentUpon>Feoq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Feoq.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Fjenis_obat.Designer.vb">
       <DependentUpon>Fjenis_obat.vb</DependentUpon>
     </Compile>
     <Compile Include="Fjenis_obat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flaporan.Designer.vb">
+      <DependentUpon>Flaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flogin.Designer.vb">
+      <DependentUpon>Flogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fmenu.Designer.vb">
@@ -121,6 +151,12 @@
     <Compile Include="Fpembelian.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Fpengguna.Designer.vb">
+      <DependentUpon>Fpengguna.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fpengguna.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ftransaksi.Designer.vb">
       <DependentUpon>Ftransaksi.vb</DependentUpon>
     </Compile>
@@ -132,6 +168,36 @@
     </Compile>
     <Compile Include="Fobat.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>laporan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lap_bulanan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_bulanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lap_pembelian.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_pembelian.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lap_stok.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_stok.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lap_tahunan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_tahunan.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -150,8 +216,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Fdaftar_transaksi.resx">
+      <DependentUpon>Fdaftar_transaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fdatar_pembelian.resx">
+      <DependentUpon>Fdatar_pembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feoq.resx">
+      <DependentUpon>Feoq.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fjenis_obat.resx">
       <DependentUpon>Fjenis_obat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flaporan.resx">
+      <DependentUpon>Flaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flogin.resx">
+      <DependentUpon>Flogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fmenu.resx">
       <DependentUpon>Fmenu.vb</DependentUpon>
@@ -162,11 +243,34 @@
     <EmbeddedResource Include="Fpembelian.resx">
       <DependentUpon>Fpembelian.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fpengguna.resx">
+      <DependentUpon>Fpengguna.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ftransaksi.resx">
       <DependentUpon>Ftransaksi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fobat.resx">
       <DependentUpon>Fobat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>laporan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lap_bulanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_bulanan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lap_pembelian.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_pembelian.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lap_stok.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_stok.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lap_tahunan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_tahunan.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

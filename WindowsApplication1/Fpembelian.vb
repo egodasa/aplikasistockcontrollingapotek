@@ -12,7 +12,7 @@
         total_harga = 0
     End Sub
     Sub getPembelian()
-        DGobat_beli.DataSource = fetchData("select * from laporan_pembelian where id_pembelian = " & id_pembelian)
+        DGobat_beli.DataSource = fetchData("select * from laporan_detail_pembelian where id_pembelian = " & id_pembelian)
         DGobat_beli.Columns("id_pemasok").Visible = False
         DGobat_beli.Columns("id_detail").Visible = False
         DGobat_beli.Columns("id_obat").Visible = False
@@ -86,5 +86,9 @@
         Ttotal_harga.Text = Format(total_harga, "Rp,   ##,##0")
         Call resetPembelian()
         Call getPembelian()
+    End Sub
+
+    Private Sub DaftarPembelianToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DaftarPembelianToolStripMenuItem.Click
+        Fdatar_pembelian.ShowDialog()
     End Sub
 End Class

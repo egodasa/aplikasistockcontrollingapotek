@@ -49,6 +49,7 @@ Partial Class Ftransaksi
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Tdibayarkan = New System.Windows.Forms.NumericUpDown()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.DaftarTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox4.SuspendLayout()
         CType(Me.Tjumlah, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGobat_beli, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -235,7 +236,7 @@ Partial Class Ftransaksi
         '
         'DataToolStripMenuItem
         '
-        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObatToolStripMenuItem, Me.JenisObatToolStripMenuItem})
+        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObatToolStripMenuItem, Me.JenisObatToolStripMenuItem, Me.DaftarTransaksiToolStripMenuItem})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
         Me.DataToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.DataToolStripMenuItem.Text = "Data"
@@ -243,13 +244,13 @@ Partial Class Ftransaksi
         'ObatToolStripMenuItem
         '
         Me.ObatToolStripMenuItem.Name = "ObatToolStripMenuItem"
-        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.ObatToolStripMenuItem.Text = "Obat"
         '
         'JenisObatToolStripMenuItem
         '
         Me.JenisObatToolStripMenuItem.Name = "JenisObatToolStripMenuItem"
-        Me.JenisObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.JenisObatToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.JenisObatToolStripMenuItem.Text = "Jenis Obat"
         '
         'Bbatal
@@ -333,6 +334,12 @@ Partial Class Ftransaksi
         Me.Label26.TabIndex = 16
         Me.Label26.Text = "Dibayar"
         '
+        'DaftarTransaksiToolStripMenuItem
+        '
+        Me.DaftarTransaksiToolStripMenuItem.Name = "DaftarTransaksiToolStripMenuItem"
+        Me.DaftarTransaksiToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.DaftarTransaksiToolStripMenuItem.Text = "Daftar Transaksi"
+        '
         'Ftransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -385,4 +392,5 @@ Partial Class Ftransaksi
     Friend WithEvents Tdibayarkan As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents JenisObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DaftarTransaksiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

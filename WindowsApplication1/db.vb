@@ -6,6 +6,8 @@ Module db
     Public cmd As MySqlCommand
     Public dr As MySqlDataReader
     Public str As String
+    Public username As String
+    Public jenis_pengguna As String
     Public _DIR As String = "F:\skprsitia\WindowsApplication1\WindowsApplication1\"
     Sub setKoneksi()
         str = "Server=192.168.56.1;uid=root;pwd=123456;database=db_apotek;port=3306"
@@ -23,10 +25,15 @@ Module db
     End Sub
     Function fetchData(ByVal q As String)
         Call setKoneksi()
-        da = New MySqlDataAdapter(q, kon)
-        ds = New DataSet
-        da.Fill(ds)
-        Return ds.Tables(0)
+        Try
+            da = New MySqlDataAdapter(q, kon)
+            ds = New DataSet
+            da.Fill(ds)
+            Return ds.Tables(0)
+        Catch ex As Exception
+            MsgBox("Terdapat kesalahan pada eksekusi SQL." & vbCrLf & "Pesan error : " & vbCrLf & ex.Message, MsgBoxStyle.Exclamation, "Kesalahan")
+            Return Nothing
+        End Try
     End Function
     Sub runQuery(ByVal q As String)
         Try
