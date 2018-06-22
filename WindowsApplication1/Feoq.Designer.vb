@@ -54,11 +54,9 @@ Partial Class Feoq
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.JenisObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PemasokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Tlain = New System.Windows.Forms.NumericUpDown()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.DaftarTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GBotomatis.SuspendLayout()
         Me.GBmanual.SuspendLayout()
@@ -392,28 +390,10 @@ Partial Class Feoq
         '
         'DataToolStripMenuItem
         '
-        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObatToolStripMenuItem, Me.JenisObatToolStripMenuItem, Me.PemasokToolStripMenuItem})
+        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarTransaksiToolStripMenuItem})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
         Me.DataToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.DataToolStripMenuItem.Text = "Data"
-        '
-        'ObatToolStripMenuItem
-        '
-        Me.ObatToolStripMenuItem.Name = "ObatToolStripMenuItem"
-        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
-        Me.ObatToolStripMenuItem.Text = "Obat"
-        '
-        'JenisObatToolStripMenuItem
-        '
-        Me.JenisObatToolStripMenuItem.Name = "JenisObatToolStripMenuItem"
-        Me.JenisObatToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
-        Me.JenisObatToolStripMenuItem.Text = "Jenis Obat"
-        '
-        'PemasokToolStripMenuItem
-        '
-        Me.PemasokToolStripMenuItem.Name = "PemasokToolStripMenuItem"
-        Me.PemasokToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
-        Me.PemasokToolStripMenuItem.Text = "Pemasok"
         '
         'Tlain
         '
@@ -433,6 +413,12 @@ Partial Class Feoq
         Me.Label11.Size = New System.Drawing.Size(84, 15)
         Me.Label11.TabIndex = 40
         Me.Label11.Text = "Biaya Lain-lain"
+        '
+        'DaftarTransaksiToolStripMenuItem
+        '
+        Me.DaftarTransaksiToolStripMenuItem.Name = "DaftarTransaksiToolStripMenuItem"
+        Me.DaftarTransaksiToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.DaftarTransaksiToolStripMenuItem.Text = "Daftar Transaksi"
         '
         'Feoq
         '
@@ -465,9 +451,6 @@ Partial Class Feoq
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents KeluarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents JenisObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PemasokToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -497,4 +480,5 @@ Partial Class Feoq
     Friend WithEvents RBmanual As System.Windows.Forms.RadioButton
     Friend WithEvents Tlain As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents DaftarTransaksiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

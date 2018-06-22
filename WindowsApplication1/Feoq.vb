@@ -1,21 +1,29 @@
 ﻿Public Class Feoq
     Dim eoq As Double
     Dim r, s, c As Double
-    Dim data As New DataTable
+    Dim data, data_obat As New DataTable
     Sub hitungEoq()
-        If Csat_waktu.Text = "Hari" Then
-            r = Tkebutuhan.Value * 365
-        ElseIf Csat_waktu.Text = "Minggu" Then
-            r = Tkebutuhan.Value * 52
-        ElseIf Csat_waktu.Text = "Bulan" Then
-            r = Tkebutuhan.Value * 12
+        If RBmanual.Checked = True Then
+            If Csat_waktu.Text = "Hari" Then
+                r = Tkebutuhan.Value * 365
+            ElseIf Csat_waktu.Text = "Minggu" Then
+                r = Tkebutuhan.Value * 52
+            ElseIf Csat_waktu.Text = "Bulan" Then
+                r = Tkebutuhan.Value * 12
+            Else
+                r = Tkebutuhan.Value * 1
+            End If
         Else
-            r = Tkebutuhan.Value * 1
+            r = Takhir.Value.Subtract(Tawal.Value).Days
         End If
         c = Tpembelian.Value
         s = Tpajak.Value + Ttransportasi.Value + Tlain.Value
         eoq = Math.Ceiling(Math.Sqrt((2 * (r * s)) / (Val(Tpenyimpanan.Text) * c)))
-        Lhasil.Text = "Diperkirakan pemesanan stok paling" & vbCrLf & " ekonomis adalah sebanyak " & eoq.ToString & " " & vbCrLf & "untuk " & Csat_waktu.Text & " selanjutnya."
+        If RBotomatis.Checked = False Then
+            Lhasil.Text = "Diperkirakan pemesanan stok paling" & vbCrLf & " ekonomis adalah sebanyak " & eoq.ToString & " " & data_obat.Rows(0).Item("Satuan").ToString & vbCrLf & "untuk " & Csat_waktu.Text & " selanjutnya."
+        Else
+            Lhasil.Text = "Diperkirakan pemesanan stok paling" & vbCrLf & "ekonomis adalah sebanyak " & eoq.ToString & " " & data_obat.Rows(0).Item("Satuan").ToString & vbCrLf & "untuk " & Takhir.Value.Subtract(Tawal.Value).Days.ToString & " hari selanjutnya."
+        End If
     End Sub
     Sub resetEoq()
         Call fetchComboboxData("select * from daftar_obat", Cobat, "Nama_Obat", "Id_Obat")
@@ -69,20 +77,29 @@
     End Sub
 
     Private Sub Tawal_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Tawal.ValueChanged, Takhir.ValueChanged, Cobat.SelectedValueChanged
-        If Cobat.SelectedIndex <> -1 Then
-            ' AND DATE(b.tgl_transaksi) between '" & Tawal.Value.ToString("yyyy-MM-dd") & "' and '" & Takhir.Value.ToString("yyyy-MM-dd") & "'
-            data = fetchData("select a.tgl_transaksi,b.id_obat,sum(b.jumlah) as jumlah,a.id_transaksi from tbl_transaksi a join tbl_detail_transaksi b on a.id_transaksi = b.id_transaksi where id_obat = " & Cobat.SelectedValue & " group by b.id_obat")
+        If Cobat.SelectedIndex > 0 And data_obat.Rows.Count > 0 Then
+            data = fetchData("select a.tgl_transaksi,b.id_obat,sum(b.jumlah) as jumlah,a.id_transaksi from tbl_transaksi a join tbl_detail_transaksi b on a.id_transaksi = b.id_transaksi where id_obat = " & Cobat.SelectedValue & " AND DATE(a.tgl_transaksi) between '" & Tawal.Value.ToString("yyyy-MM-dd") & "' and '" & Takhir.Value.ToString("yyyy-MM-dd") & "' group by b.id_obat")
             If data.Rows.Count = 0 Then
                 Lket.Text = "Silahkan pilih " & vbCrLf & "tanggal lain..."
             Else
                 If data.Rows(0).Item("jumlah") = 0 Then
                     Lket.Text = "Silahkan pilih " & vbCrLf & "tanggal lain..."
                 Else
-                    Lket.Text = "Lama waktu " & Tawal.Value.Subtract(Takhir.Value).Days.ToString & " hari dengan " & vbCrLf & " jumlah kebutuhan barang " & data.Rows(0).Item("jumlah").ToString
+                    Lket.Text = "Lama waktu " & Takhir.Value.Subtract(Tawal.Value).Days.ToString & " hari dengan " & vbCrLf & " jumlah kebutuhan barang " & vbCrLf & data.Rows(0).Item("jumlah").ToString & " " & data_obat.Rows(0).Item("Satuan").ToString
                 End If
             End If
         Else
             Lket.Text = ""
         End If
+    End Sub
+
+    Private Sub Cobat_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cobat.SelectedIndexChanged
+        If Cobat.SelectedIndex > 0 Then
+            data_obat = fetchData("select * from daftar_obat where id_obat = " & Cobat.SelectedValue)
+        End If
+    End Sub
+
+    Private Sub DaftarTransaksiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DaftarTransaksiToolStripMenuItem.Click
+        Fdaftar_transaksi.Show()
     End Sub
 End Class
