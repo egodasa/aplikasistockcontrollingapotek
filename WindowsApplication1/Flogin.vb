@@ -11,7 +11,11 @@
             jenis_pengguna = data_pengguna.Rows(0).Item("jenis")
             Tusername.Clear()
             Tpassword.Clear()
-            Fmenu.Show()
+            If data_pengguna.Rows(0).Item("jenis") = "Admin" Or data_pengguna.Rows(0).Item("jenis") = "Apoteker" Then
+                Fmenu.Show()
+            Else
+                Flaporan.Show()
+            End If
             Me.Hide()
         Else
             MessageBox.Show("Username atau password salah!", "Pesan", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)

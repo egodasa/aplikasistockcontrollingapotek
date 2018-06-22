@@ -13,7 +13,7 @@
             r = Tkebutuhan.Value * 1
         End If
         c = Tpembelian.Value
-        s = Tpajak.Value + Ttransportasi.Value
+        s = Tpajak.Value + Ttransportasi.Value + Tlain.Value
         eoq = Math.Ceiling(Math.Sqrt((2 * (r * s)) / (Val(Tpenyimpanan.Text) * c)))
         Lhasil.Text = "Diperkirakan pemesanan stok paling" & vbCrLf & " ekonomis adalah sebanyak " & eoq.ToString & " " & vbCrLf & "untuk " & Csat_waktu.Text & " selanjutnya."
     End Sub
@@ -70,7 +70,8 @@
 
     Private Sub Tawal_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Tawal.ValueChanged, Takhir.ValueChanged, Cobat.SelectedValueChanged
         If Cobat.SelectedIndex <> -1 Then
-            data = fetchData("select a.tgl_transaksi,b.id_obat,sum(b.jumlah) as jumlah,a.id_transaksi from tbl_transaksi a join tbl_detail_transaksi b on a.id_transaksi = b.id_transaksi group by b.id_obat where id_obat = " & Cobat.SelectedValue & " AND DATE(b.tgl_transaksi) between '" & Tawal.Value.ToString("yyyy-MM-dd") & "' and '" & Takhir.Value.ToString("yyyy-MM-dd") & "'")
+            ' AND DATE(b.tgl_transaksi) between '" & Tawal.Value.ToString("yyyy-MM-dd") & "' and '" & Takhir.Value.ToString("yyyy-MM-dd") & "'
+            data = fetchData("select a.tgl_transaksi,b.id_obat,sum(b.jumlah) as jumlah,a.id_transaksi from tbl_transaksi a join tbl_detail_transaksi b on a.id_transaksi = b.id_transaksi where id_obat = " & Cobat.SelectedValue & " group by b.id_obat")
             If data.Rows.Count = 0 Then
                 Lket.Text = "Silahkan pilih " & vbCrLf & "tanggal lain..."
             Else
@@ -80,6 +81,8 @@
                     Lket.Text = "Lama waktu " & Tawal.Value.Subtract(Takhir.Value).Days.ToString & " hari dengan " & vbCrLf & " jumlah kebutuhan barang " & data.Rows(0).Item("jumlah").ToString
                 End If
             End If
+        Else
+            Lket.Text = ""
         End If
     End Sub
 End Class

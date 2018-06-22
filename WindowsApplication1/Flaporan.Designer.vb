@@ -27,11 +27,9 @@ Partial Class Flaporan
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Chari = New System.Windows.Forms.ComboBox()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
@@ -94,53 +92,25 @@ Partial Class Flaporan
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Chari)
         Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 78)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(313, 76)
+        Me.GroupBox2.Size = New System.Drawing.Size(313, 55)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Laporan Pembelian"
         '
-        'DateTimePicker1
+        'Chari
         '
-        Me.DateTimePicker1.CustomFormat = "dd-MM-yyyy"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(91, 19)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(111, 20)
-        Me.DateTimePicker1.TabIndex = 0
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.CustomFormat = "dd-MM-yyyy"
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(91, 45)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(111, 20)
-        Me.DateTimePicker2.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Waktu Awal"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 45)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Waktu Akhir"
+        Me.Chari.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.Chari.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.Chari.FormattingEnabled = True
+        Me.Chari.Location = New System.Drawing.Point(70, 19)
+        Me.Chari.Name = "Chari"
+        Me.Chari.Size = New System.Drawing.Size(121, 21)
+        Me.Chari.TabIndex = 7
         '
         'Button4
         '
@@ -151,10 +121,19 @@ Partial Class Flaporan
         Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button4.Location = New System.Drawing.Point(208, 19)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(95, 46)
+        Me.Button4.Size = New System.Drawing.Size(95, 29)
         Me.Button4.TabIndex = 6
         Me.Button4.Text = "Cetak"
         Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 19)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(48, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Pilih Hari"
         '
         'Button5
         '
@@ -163,7 +142,7 @@ Partial Class Flaporan
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button5.Location = New System.Drawing.Point(18, 170)
+        Me.Button5.Location = New System.Drawing.Point(18, 139)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(95, 48)
         Me.Button5.TabIndex = 6
@@ -177,7 +156,7 @@ Partial Class Flaporan
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button6.Location = New System.Drawing.Point(252, 190)
+        Me.Button6.Location = New System.Drawing.Point(252, 159)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(73, 28)
         Me.Button6.TabIndex = 8
@@ -188,7 +167,7 @@ Partial Class Flaporan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(340, 244)
+        Me.ClientSize = New System.Drawing.Size(340, 197)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox2)
@@ -208,9 +187,7 @@ Partial Class Flaporan
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Chari As System.Windows.Forms.ComboBox
 End Class

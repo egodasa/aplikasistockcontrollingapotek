@@ -154,7 +154,7 @@ Partial Class Fpengguna
         'Cjenis
         '
         Me.Cjenis.FormattingEnabled = True
-        Me.Cjenis.Items.AddRange(New Object() {"Admin", "Apoteker"})
+        Me.Cjenis.Items.AddRange(New Object() {"Admin", "Apoteker", "Pimpinan"})
         Me.Cjenis.Location = New System.Drawing.Point(125, 82)
         Me.Cjenis.Name = "Cjenis"
         Me.Cjenis.Size = New System.Drawing.Size(208, 23)

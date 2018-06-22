@@ -57,6 +57,8 @@ Partial Class Feoq
         Me.ObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PemasokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Tlain = New System.Windows.Forms.NumericUpDown()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GBotomatis.SuspendLayout()
         Me.GBmanual.SuspendLayout()
@@ -65,11 +67,14 @@ Partial Class Feoq
         CType(Me.Ttransportasi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tpajak, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.Tlain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox1.Controls.Add(Me.Tlain)
+        Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.RBotomatis)
         Me.GroupBox1.Controls.Add(Me.RBmanual)
         Me.GroupBox1.Controls.Add(Me.Bexit)
@@ -88,7 +93,7 @@ Partial Class Feoq
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 27)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(437, 420)
+        Me.GroupBox1.Size = New System.Drawing.Size(437, 447)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Kalkulasi EOQ"
@@ -96,21 +101,23 @@ Partial Class Feoq
         'RBotomatis
         '
         Me.RBotomatis.AutoSize = True
-        Me.RBotomatis.Location = New System.Drawing.Point(15, 87)
+        Me.RBotomatis.Location = New System.Drawing.Point(14, 86)
         Me.RBotomatis.Name = "RBotomatis"
-        Me.RBotomatis.Size = New System.Drawing.Size(14, 13)
+        Me.RBotomatis.Size = New System.Drawing.Size(119, 17)
         Me.RBotomatis.TabIndex = 39
+        Me.RBotomatis.Text = "Data Dari Transaksi"
         Me.RBotomatis.UseVisualStyleBackColor = True
         '
         'RBmanual
         '
         Me.RBmanual.AutoSize = True
         Me.RBmanual.Checked = True
-        Me.RBmanual.Location = New System.Drawing.Point(15, 43)
+        Me.RBmanual.Location = New System.Drawing.Point(14, 17)
         Me.RBmanual.Name = "RBmanual"
-        Me.RBmanual.Size = New System.Drawing.Size(14, 13)
+        Me.RBmanual.Size = New System.Drawing.Size(86, 17)
         Me.RBmanual.TabIndex = 38
         Me.RBmanual.TabStop = True
+        Me.RBmanual.Text = "Data Manual"
         Me.RBmanual.UseVisualStyleBackColor = True
         '
         'Bexit
@@ -120,7 +127,7 @@ Partial Class Feoq
         Me.Bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bexit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bexit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bexit.Location = New System.Drawing.Point(343, 391)
+        Me.Bexit.Location = New System.Drawing.Point(343, 418)
         Me.Bexit.Name = "Bexit"
         Me.Bexit.Size = New System.Drawing.Size(85, 23)
         Me.Bexit.TabIndex = 37
@@ -136,18 +143,17 @@ Partial Class Feoq
         Me.GBotomatis.Controls.Add(Me.Label10)
         Me.GBotomatis.Controls.Add(Me.Label9)
         Me.GBotomatis.Controls.Add(Me.Label8)
-        Me.GBotomatis.Location = New System.Drawing.Point(44, 75)
+        Me.GBotomatis.Location = New System.Drawing.Point(14, 97)
         Me.GBotomatis.Name = "GBotomatis"
-        Me.GBotomatis.Size = New System.Drawing.Size(378, 103)
+        Me.GBotomatis.Size = New System.Drawing.Size(407, 90)
         Me.GBotomatis.TabIndex = 29
         Me.GBotomatis.TabStop = False
-        Me.GBotomatis.Text = "Data Dari Transaksi"
         '
         'Takhir
         '
         Me.Takhir.CustomFormat = "dd-MM-yyyy"
         Me.Takhir.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.Takhir.Location = New System.Drawing.Point(103, 77)
+        Me.Takhir.Location = New System.Drawing.Point(103, 64)
         Me.Takhir.Name = "Takhir"
         Me.Takhir.Size = New System.Drawing.Size(154, 20)
         Me.Takhir.TabIndex = 6
@@ -156,7 +162,7 @@ Partial Class Feoq
         '
         Me.Tawal.CustomFormat = "dd-MM-yyyy"
         Me.Tawal.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.Tawal.Location = New System.Drawing.Point(103, 52)
+        Me.Tawal.Location = New System.Drawing.Point(103, 39)
         Me.Tawal.Name = "Tawal"
         Me.Tawal.Size = New System.Drawing.Size(154, 20)
         Me.Tawal.TabIndex = 5
@@ -164,7 +170,7 @@ Partial Class Feoq
         'Cobat
         '
         Me.Cobat.FormattingEnabled = True
-        Me.Cobat.Location = New System.Drawing.Point(103, 25)
+        Me.Cobat.Location = New System.Drawing.Point(103, 12)
         Me.Cobat.Name = "Cobat"
         Me.Cobat.Size = New System.Drawing.Size(154, 21)
         Me.Cobat.TabIndex = 4
@@ -180,7 +186,7 @@ Partial Class Feoq
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(6, 77)
+        Me.Label10.Location = New System.Drawing.Point(6, 64)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(66, 13)
         Me.Label10.TabIndex = 2
@@ -189,7 +195,7 @@ Partial Class Feoq
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 52)
+        Me.Label9.Location = New System.Drawing.Point(6, 39)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 13)
         Me.Label9.TabIndex = 1
@@ -198,7 +204,7 @@ Partial Class Feoq
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 25)
+        Me.Label8.Location = New System.Drawing.Point(6, 12)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(91, 13)
         Me.Label8.TabIndex = 0
@@ -210,24 +216,23 @@ Partial Class Feoq
         Me.GBmanual.Controls.Add(Me.Tkebutuhan)
         Me.GBmanual.Controls.Add(Me.Label5)
         Me.GBmanual.Controls.Add(Me.Label2)
-        Me.GBmanual.Location = New System.Drawing.Point(44, 22)
+        Me.GBmanual.Location = New System.Drawing.Point(15, 31)
         Me.GBmanual.Name = "GBmanual"
-        Me.GBmanual.Size = New System.Drawing.Size(378, 47)
+        Me.GBmanual.Size = New System.Drawing.Size(407, 37)
         Me.GBmanual.TabIndex = 28
         Me.GBmanual.TabStop = False
-        Me.GBmanual.Text = "Data Manual"
         '
         'Csat_waktu
         '
         Me.Csat_waktu.FormattingEnabled = True
-        Me.Csat_waktu.Location = New System.Drawing.Point(299, 19)
+        Me.Csat_waktu.Location = New System.Drawing.Point(293, 10)
         Me.Csat_waktu.Name = "Csat_waktu"
-        Me.Csat_waktu.Size = New System.Drawing.Size(73, 21)
+        Me.Csat_waktu.Size = New System.Drawing.Size(108, 21)
         Me.Csat_waktu.TabIndex = 22
         '
         'Tkebutuhan
         '
-        Me.Tkebutuhan.Location = New System.Drawing.Point(132, 20)
+        Me.Tkebutuhan.Location = New System.Drawing.Point(132, 10)
         Me.Tkebutuhan.Maximum = New Decimal(New Integer() {-1486618624, 232830643, 0, 0})
         Me.Tkebutuhan.Name = "Tkebutuhan"
         Me.Tkebutuhan.Size = New System.Drawing.Size(125, 20)
@@ -238,7 +243,7 @@ Partial Class Feoq
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(263, 20)
+        Me.Label5.Location = New System.Drawing.Point(263, 10)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(24, 15)
         Me.Label5.TabIndex = 21
@@ -248,7 +253,7 @@ Partial Class Feoq
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 22)
+        Me.Label2.Location = New System.Drawing.Point(6, 12)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(105, 15)
         Me.Label2.TabIndex = 7
@@ -256,14 +261,14 @@ Partial Class Feoq
         '
         'Tpenyimpanan
         '
-        Me.Tpenyimpanan.Location = New System.Drawing.Point(143, 298)
+        Me.Tpenyimpanan.Location = New System.Drawing.Point(142, 331)
         Me.Tpenyimpanan.Name = "Tpenyimpanan"
         Me.Tpenyimpanan.Size = New System.Drawing.Size(280, 20)
         Me.Tpenyimpanan.TabIndex = 27
         '
         'Tpembelian
         '
-        Me.Tpembelian.Location = New System.Drawing.Point(143, 184)
+        Me.Tpembelian.Location = New System.Drawing.Point(141, 199)
         Me.Tpembelian.Maximum = New Decimal(New Integer() {-1486618624, 232830643, 0, 0})
         Me.Tpembelian.Name = "Tpembelian"
         Me.Tpembelian.Size = New System.Drawing.Size(280, 20)
@@ -274,7 +279,7 @@ Partial Class Feoq
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(12, 184)
+        Me.Label7.Location = New System.Drawing.Point(11, 199)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(94, 15)
         Me.Label7.TabIndex = 25
@@ -284,7 +289,7 @@ Partial Class Feoq
         '
         Me.Lhasil.AutoSize = True
         Me.Lhasil.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lhasil.Location = New System.Drawing.Point(142, 327)
+        Me.Lhasil.Location = New System.Drawing.Point(141, 360)
         Me.Lhasil.Name = "Lhasil"
         Me.Lhasil.Size = New System.Drawing.Size(60, 15)
         Me.Lhasil.TabIndex = 24
@@ -294,7 +299,7 @@ Partial Class Feoq
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(12, 327)
+        Me.Label6.Location = New System.Drawing.Point(11, 360)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(101, 15)
         Me.Label6.TabIndex = 23
@@ -302,7 +307,7 @@ Partial Class Feoq
         '
         'Ttransportasi
         '
-        Me.Ttransportasi.Location = New System.Drawing.Point(143, 260)
+        Me.Ttransportasi.Location = New System.Drawing.Point(141, 251)
         Me.Ttransportasi.Maximum = New Decimal(New Integer() {-1486618624, 232830643, 0, 0})
         Me.Ttransportasi.Name = "Ttransportasi"
         Me.Ttransportasi.Size = New System.Drawing.Size(280, 20)
@@ -311,7 +316,7 @@ Partial Class Feoq
         '
         'Tpajak
         '
-        Me.Tpajak.Location = New System.Drawing.Point(143, 221)
+        Me.Tpajak.Location = New System.Drawing.Point(141, 225)
         Me.Tpajak.Maximum = New Decimal(New Integer() {-1486618624, 232830643, 0, 0})
         Me.Tpajak.Name = "Tpajak"
         Me.Tpajak.Size = New System.Drawing.Size(280, 20)
@@ -325,7 +330,7 @@ Partial Class Feoq
         Me.Bsimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bsimpan.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bsimpan.Location = New System.Drawing.Point(15, 389)
+        Me.Bsimpan.Location = New System.Drawing.Point(15, 416)
         Me.Bsimpan.Name = "Bsimpan"
         Me.Bsimpan.Size = New System.Drawing.Size(108, 25)
         Me.Bsimpan.TabIndex = 15
@@ -336,7 +341,7 @@ Partial Class Feoq
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 298)
+        Me.Label4.Location = New System.Drawing.Point(11, 331)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 15)
         Me.Label4.TabIndex = 13
@@ -346,7 +351,7 @@ Partial Class Feoq
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 260)
+        Me.Label3.Location = New System.Drawing.Point(11, 251)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(103, 15)
         Me.Label3.TabIndex = 11
@@ -356,7 +361,7 @@ Partial Class Feoq
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 221)
+        Me.Label1.Location = New System.Drawing.Point(11, 225)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(66, 15)
         Me.Label1.TabIndex = 9
@@ -410,11 +415,30 @@ Partial Class Feoq
         Me.PemasokToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.PemasokToolStripMenuItem.Text = "Pemasok"
         '
+        'Tlain
+        '
+        Me.Tlain.Location = New System.Drawing.Point(141, 277)
+        Me.Tlain.Maximum = New Decimal(New Integer() {-1486618624, 232830643, 0, 0})
+        Me.Tlain.Name = "Tlain"
+        Me.Tlain.Size = New System.Drawing.Size(281, 20)
+        Me.Tlain.TabIndex = 41
+        Me.Tlain.ThousandsSeparator = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(12, 277)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(84, 15)
+        Me.Label11.TabIndex = 40
+        Me.Label11.Text = "Biaya Lain-lain"
+        '
         'Feoq
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(456, 459)
+        Me.ClientSize = New System.Drawing.Size(456, 486)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Feoq"
@@ -431,6 +455,7 @@ Partial Class Feoq
         CType(Me.Tpajak, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.Tlain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -470,4 +495,6 @@ Partial Class Feoq
     Friend WithEvents GBmanual As System.Windows.Forms.GroupBox
     Friend WithEvents RBotomatis As System.Windows.Forms.RadioButton
     Friend WithEvents RBmanual As System.Windows.Forms.RadioButton
+    Friend WithEvents Tlain As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class
