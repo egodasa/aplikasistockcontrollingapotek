@@ -40,7 +40,7 @@ Partial Class Fjenis_obat
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox1.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox1.Controls.Add(Me.DGjobat)
         Me.GroupBox1.Controls.Add(Me.Tnm_jenis)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -80,7 +80,7 @@ Partial Class Fjenis_obat
         '
         'GroupBox2
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox2.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox2.Controls.Add(Me.Bcancel)
         Me.GroupBox2.Controls.Add(Me.Bdelete)
         Me.GroupBox2.Controls.Add(Me.Bexit)
@@ -96,7 +96,7 @@ Partial Class Fjenis_obat
         '
         'Bcancel
         '
-        Me.Bcancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Bcancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Bcancel.Enabled = False
         Me.Bcancel.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bcancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -126,7 +126,7 @@ Partial Class Fjenis_obat
         '
         'Bexit
         '
-        Me.Bexit.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Bexit.BackColor = System.Drawing.Color.Gray
         Me.Bexit.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bexit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -171,7 +171,7 @@ Partial Class Fjenis_obat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(487, 300)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)

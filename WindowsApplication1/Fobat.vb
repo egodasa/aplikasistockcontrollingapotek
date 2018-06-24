@@ -30,7 +30,7 @@
     End Sub
 
     Private Sub Bsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bsave.Click
-        runQuery("insert into tbl_obat (nm_obat, stok, id_jobat, hrg_obat, id_sat_obat) values ('" & Tnm_obat.Text & "', " & (Tstok.Value + Tstok_ubah.Value) & ", " & Cjns_obat.SelectedValue & ", " & Thrg_obat.Text & "," & Csatuan.SelectedValue & ")")
+        runQuery("insert into tbl_obat (nm_obat, stok, id_jobat, hrg_obat, id_sat_obat) values ('" & Tnm_obat.Text & "', " & Tstok.Value & ", " & Cjns_obat.SelectedValue & ", " & Thrg_obat.Text & "," & Csatuan.SelectedValue & ")")
         Call successMessage()
         DGobat.DataSource = fetchData(getData)
         Call resetForm()
@@ -70,7 +70,7 @@
         runQuery("update tbl_obat set nm_obat = '" & Tnm_obat.Text &
                  "', id_jobat = " & Cjns_obat.SelectedValue &
                  ", hrg_obat = " & Thrg_obat.Text &
-                 ", stok = " & Tstok.Text &
+                 ", stok = " & (Tstok.Value + Tstok_ubah.Value) &
                  ", id_sat_obat = " & Csatuan.SelectedValue &
                  " where id_obat = " & DGobat.CurrentRow.Cells("Id_Obat").Value)
         Call editMessage()

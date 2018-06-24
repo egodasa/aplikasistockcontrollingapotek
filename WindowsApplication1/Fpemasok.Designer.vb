@@ -22,6 +22,7 @@ Partial Class Fpemasok
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fpemasok))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Bcancel = New System.Windows.Forms.Button()
         Me.Bdelete = New System.Windows.Forms.Button()
@@ -45,7 +46,7 @@ Partial Class Fpemasok
         '
         'GroupBox2
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox2.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox2.Controls.Add(Me.Bcancel)
         Me.GroupBox2.Controls.Add(Me.Bdelete)
         Me.GroupBox2.Controls.Add(Me.Bexit)
@@ -61,7 +62,7 @@ Partial Class Fpemasok
         '
         'Bcancel
         '
-        Me.Bcancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Bcancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Bcancel.Enabled = False
         Me.Bcancel.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bcancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -91,7 +92,7 @@ Partial Class Fpemasok
         '
         'Bexit
         '
-        Me.Bexit.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Bexit.BackColor = System.Drawing.Color.Gray
         Me.Bexit.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bexit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -134,7 +135,7 @@ Partial Class Fpemasok
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox1.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox1.Controls.Add(Me.Talamat)
         Me.GroupBox1.Controls.Add(Me.Tnm_pemasok)
         Me.GroupBox1.Controls.Add(Me.DGpemasok)
@@ -237,9 +238,11 @@ Partial Class Fpemasok
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(613, 343)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Fpemasok"
         Me.Text = "Kelola Pemasok"
         Me.GroupBox2.ResumeLayout(False)

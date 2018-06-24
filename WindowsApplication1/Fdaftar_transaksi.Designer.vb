@@ -22,15 +22,16 @@ Partial Class Fdaftar_transaksi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fdaftar_transaksi))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Tcari = New System.Windows.Forms.TextBox()
         Me.DGtransaksi = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DGdetail = New System.Windows.Forms.DataGridView()
-        Me.Lid_transaksi = New System.Windows.Forms.Label()
-        Me.Ltgl_transaksi = New System.Windows.Forms.Label()
         Me.Ltotal = New System.Windows.Forms.Label()
-        Me.Tcari = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Ltgl_transaksi = New System.Windows.Forms.Label()
+        Me.Lid_transaksi = New System.Windows.Forms.Label()
+        Me.DGdetail = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGtransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -39,6 +40,7 @@ Partial Class Fdaftar_transaksi
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Tcari)
         Me.GroupBox1.Controls.Add(Me.DGtransaksi)
@@ -48,6 +50,22 @@ Partial Class Fdaftar_transaksi
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Daftar Transaksi"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(10, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Pencarian"
+        '
+        'Tcari
+        '
+        Me.Tcari.Location = New System.Drawing.Point(88, 26)
+        Me.Tcari.Name = "Tcari"
+        Me.Tcari.Size = New System.Drawing.Size(389, 20)
+        Me.Tcari.TabIndex = 1
         '
         'DGtransaksi
         '
@@ -62,6 +80,7 @@ Partial Class Fdaftar_transaksi
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox2.Controls.Add(Me.Ltotal)
         Me.GroupBox2.Controls.Add(Me.Ltgl_transaksi)
         Me.GroupBox2.Controls.Add(Me.Lid_transaksi)
@@ -72,6 +91,30 @@ Partial Class Fdaftar_transaksi
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detail Transaksi"
+        '
+        'Ltotal
+        '
+        Me.Ltotal.AutoSize = True
+        Me.Ltotal.Location = New System.Drawing.Point(10, 81)
+        Me.Ltotal.Name = "Ltotal"
+        Me.Ltotal.Size = New System.Drawing.Size(0, 13)
+        Me.Ltotal.TabIndex = 3
+        '
+        'Ltgl_transaksi
+        '
+        Me.Ltgl_transaksi.AutoSize = True
+        Me.Ltgl_transaksi.Location = New System.Drawing.Point(10, 54)
+        Me.Ltgl_transaksi.Name = "Ltgl_transaksi"
+        Me.Ltgl_transaksi.Size = New System.Drawing.Size(0, 13)
+        Me.Ltgl_transaksi.TabIndex = 2
+        '
+        'Lid_transaksi
+        '
+        Me.Lid_transaksi.AutoSize = True
+        Me.Lid_transaksi.Location = New System.Drawing.Point(10, 29)
+        Me.Lid_transaksi.Name = "Lid_transaksi"
+        Me.Lid_transaksi.Size = New System.Drawing.Size(0, 13)
+        Me.Lid_transaksi.TabIndex = 1
         '
         'DGdetail
         '
@@ -84,53 +127,15 @@ Partial Class Fdaftar_transaksi
         Me.DGdetail.Size = New System.Drawing.Size(497, 251)
         Me.DGdetail.TabIndex = 0
         '
-        'Lid_transaksi
-        '
-        Me.Lid_transaksi.AutoSize = True
-        Me.Lid_transaksi.Location = New System.Drawing.Point(10, 29)
-        Me.Lid_transaksi.Name = "Lid_transaksi"
-        Me.Lid_transaksi.Size = New System.Drawing.Size(0, 13)
-        Me.Lid_transaksi.TabIndex = 1
-        '
-        'Ltgl_transaksi
-        '
-        Me.Ltgl_transaksi.AutoSize = True
-        Me.Ltgl_transaksi.Location = New System.Drawing.Point(10, 54)
-        Me.Ltgl_transaksi.Name = "Ltgl_transaksi"
-        Me.Ltgl_transaksi.Size = New System.Drawing.Size(0, 13)
-        Me.Ltgl_transaksi.TabIndex = 2
-        '
-        'Ltotal
-        '
-        Me.Ltotal.AutoSize = True
-        Me.Ltotal.Location = New System.Drawing.Point(10, 81)
-        Me.Ltotal.Name = "Ltotal"
-        Me.Ltotal.Size = New System.Drawing.Size(0, 13)
-        Me.Ltotal.TabIndex = 3
-        '
-        'Tcari
-        '
-        Me.Tcari.Location = New System.Drawing.Point(88, 26)
-        Me.Tcari.Name = "Tcari"
-        Me.Tcari.Size = New System.Drawing.Size(389, 20)
-        Me.Tcari.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(10, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Pencarian"
-        '
         'Fdaftar_transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1033, 399)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Fdaftar_transaksi"
         Me.Text = "Daftar Transaksi"
         Me.GroupBox1.ResumeLayout(False)

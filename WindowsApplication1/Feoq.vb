@@ -102,4 +102,9 @@
     Private Sub DaftarTransaksiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DaftarTransaksiToolStripMenuItem.Click
         Fdaftar_transaksi.Show()
     End Sub
+
+    Private Sub KeluarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles KeluarToolStripMenuItem.Click
+        Fmenu.Show()
+        Me.Close()
+    End Sub
 End Class

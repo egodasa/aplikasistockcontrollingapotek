@@ -22,6 +22,7 @@ Partial Class Fpembelian
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fpembelian))
         Me.Bbatal = New System.Windows.Forms.Button()
         Me.Bsimpan = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -54,7 +55,7 @@ Partial Class Fpembelian
         '
         'Bbatal
         '
-        Me.Bbatal.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Bbatal.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Bbatal.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bbatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bbatal.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -100,7 +101,7 @@ Partial Class Fpembelian
         'KeluarToolStripMenuItem
         '
         Me.KeluarToolStripMenuItem.Name = "KeluarToolStripMenuItem"
-        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.KeluarToolStripMenuItem.Text = "Keluar"
         '
         'DataToolStripMenuItem
@@ -118,7 +119,7 @@ Partial Class Fpembelian
         '
         'Bexit
         '
-        Me.Bexit.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Bexit.BackColor = System.Drawing.Color.Gray
         Me.Bexit.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bexit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -132,7 +133,7 @@ Partial Class Fpembelian
         '
         'GroupBox4
         '
-        Me.GroupBox4.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox4.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox4.Controls.Add(Me.Tharga)
         Me.GroupBox4.Controls.Add(Me.Label2)
         Me.GroupBox4.Controls.Add(Me.Ttotal_harga)
@@ -308,10 +309,12 @@ Partial Class Fpembelian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(580, 442)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Bexit)
         Me.Controls.Add(Me.GroupBox4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Fpembelian"
         Me.Text = "Pembelian Stok Obat"
         Me.MenuStrip1.ResumeLayout(False)

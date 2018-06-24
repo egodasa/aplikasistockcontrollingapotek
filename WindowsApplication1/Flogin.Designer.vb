@@ -22,6 +22,7 @@ Partial Class Flogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Flogin))
         Me.Tpassword = New System.Windows.Forms.MaskedTextBox()
         Me.Tusername = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -98,6 +99,7 @@ Partial Class Flogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(279, 103)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Bedit)
@@ -105,6 +107,7 @@ Partial Class Flogin
         Me.Controls.Add(Me.Tusername)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Flogin"
         Me.Text = "Login ke aplikasi"
         Me.ResumeLayout(False)

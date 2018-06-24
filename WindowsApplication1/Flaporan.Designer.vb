@@ -22,6 +22,7 @@ Partial Class Flaporan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Flaporan))
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -80,6 +81,7 @@ Partial Class Flaporan
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button3)
@@ -92,6 +94,7 @@ Partial Class Flaporan
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox2.Controls.Add(Me.Chari)
         Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.Label2)
@@ -167,11 +170,13 @@ Partial Class Flaporan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(340, 197)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Flaporan"
         Me.Text = "Form Laporan"
         Me.GroupBox1.ResumeLayout(False)

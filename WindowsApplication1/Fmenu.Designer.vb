@@ -66,7 +66,7 @@ Partial Class Fmenu
         '
         'Bjobat
         '
-        Me.Bjobat.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Bjobat.BackColor = System.Drawing.Color.ForestGreen
         Me.Bjobat.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption
         Me.Bjobat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bjobat.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -81,17 +81,17 @@ Partial Class Fmenu
         '
         'Button7
         '
-        Me.Button7.BackColor = System.Drawing.Color.Gray
+        Me.Button7.BackColor = System.Drawing.Color.DarkGray
         Me.Button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button7.Location = New System.Drawing.Point(445, 199)
+        Me.Button7.Location = New System.Drawing.Point(465, 196)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(104, 29)
+        Me.Button7.Size = New System.Drawing.Size(84, 30)
         Me.Button7.TabIndex = 6
         Me.Button7.Text = "Keluar ->"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button7.UseVisualStyleBackColor = False
         '
         'Label1
@@ -106,7 +106,7 @@ Partial Class Fmenu
         '
         'Bpemasok
         '
-        Me.Bpemasok.BackColor = System.Drawing.Color.Crimson
+        Me.Bpemasok.BackColor = System.Drawing.Color.Gray
         Me.Bpemasok.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption
         Me.Bpemasok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bpemasok.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -121,7 +121,7 @@ Partial Class Fmenu
         '
         'Bstok
         '
-        Me.Bstok.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Bstok.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Bstok.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption
         Me.Bstok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bstok.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -151,7 +151,7 @@ Partial Class Fmenu
         '
         'Bpengguna
         '
-        Me.Bpengguna.BackColor = System.Drawing.Color.Crimson
+        Me.Bpengguna.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Bpengguna.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption
         Me.Bpengguna.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bpengguna.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -168,7 +168,7 @@ Partial Class Fmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.MintCream
+        Me.BackColor = System.Drawing.Color.Honeydew
         Me.ClientSize = New System.Drawing.Size(561, 236)
         Me.Controls.Add(Me.Bpengguna)
         Me.Controls.Add(Me.Beoq)

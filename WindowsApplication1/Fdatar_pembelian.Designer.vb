@@ -22,6 +22,7 @@ Partial Class Fdatar_pembelian
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fdatar_pembelian))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Ltotal = New System.Windows.Forms.Label()
         Me.Ltgl_transaksi = New System.Windows.Forms.Label()
@@ -39,6 +40,7 @@ Partial Class Fdatar_pembelian
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox2.Controls.Add(Me.Ltotal)
         Me.GroupBox2.Controls.Add(Me.Ltgl_transaksi)
         Me.GroupBox2.Controls.Add(Me.Lid_transaksi)
@@ -87,6 +89,7 @@ Partial Class Fdatar_pembelian
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Tcari)
         Me.GroupBox1.Controls.Add(Me.DGtransaksi)
@@ -128,9 +131,11 @@ Partial Class Fdatar_pembelian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1042, 398)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Fdatar_pembelian"
         Me.Text = "Daftar Pembelian"
         Me.GroupBox2.ResumeLayout(False)

@@ -20,4 +20,8 @@
             DGtransaksi.DataSource = fetchData("select * from daftar_transaksi")
         End If
     End Sub
+
+    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class

@@ -22,7 +22,10 @@ Partial Class Feoq
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Feoq))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Tlain = New System.Windows.Forms.NumericUpDown()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.RBotomatis = New System.Windows.Forms.RadioButton()
         Me.RBmanual = New System.Windows.Forms.RadioButton()
         Me.Bexit = New System.Windows.Forms.Button()
@@ -54,10 +57,9 @@ Partial Class Feoq
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Tlain = New System.Windows.Forms.NumericUpDown()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.DaftarTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.Tlain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBotomatis.SuspendLayout()
         Me.GBmanual.SuspendLayout()
         CType(Me.Tkebutuhan, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,12 +67,11 @@ Partial Class Feoq
         CType(Me.Ttransportasi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tpajak, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.Tlain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox1.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox1.Controls.Add(Me.Tlain)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.RBotomatis)
@@ -95,6 +96,25 @@ Partial Class Feoq
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Kalkulasi EOQ"
+        '
+        'Tlain
+        '
+        Me.Tlain.Location = New System.Drawing.Point(141, 277)
+        Me.Tlain.Maximum = New Decimal(New Integer() {-1486618624, 232830643, 0, 0})
+        Me.Tlain.Name = "Tlain"
+        Me.Tlain.Size = New System.Drawing.Size(281, 20)
+        Me.Tlain.TabIndex = 41
+        Me.Tlain.ThousandsSeparator = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(12, 277)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(84, 15)
+        Me.Label11.TabIndex = 40
+        Me.Label11.Text = "Biaya Lain-lain"
         '
         'RBotomatis
         '
@@ -385,7 +405,7 @@ Partial Class Feoq
         'KeluarToolStripMenuItem
         '
         Me.KeluarToolStripMenuItem.Name = "KeluarToolStripMenuItem"
-        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.KeluarToolStripMenuItem.Text = "Keluar"
         '
         'DataToolStripMenuItem
@@ -394,25 +414,6 @@ Partial Class Feoq
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
         Me.DataToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.DataToolStripMenuItem.Text = "Data"
-        '
-        'Tlain
-        '
-        Me.Tlain.Location = New System.Drawing.Point(141, 277)
-        Me.Tlain.Maximum = New Decimal(New Integer() {-1486618624, 232830643, 0, 0})
-        Me.Tlain.Name = "Tlain"
-        Me.Tlain.Size = New System.Drawing.Size(281, 20)
-        Me.Tlain.TabIndex = 41
-        Me.Tlain.ThousandsSeparator = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(12, 277)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(84, 15)
-        Me.Label11.TabIndex = 40
-        Me.Label11.Text = "Biaya Lain-lain"
         '
         'DaftarTransaksiToolStripMenuItem
         '
@@ -424,13 +425,16 @@ Partial Class Feoq
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(456, 486)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Feoq"
         Me.Text = "Perhitungan EOQ"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.Tlain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBotomatis.ResumeLayout(False)
         Me.GBotomatis.PerformLayout()
         Me.GBmanual.ResumeLayout(False)
@@ -441,7 +445,6 @@ Partial Class Feoq
         CType(Me.Tpajak, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.Tlain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

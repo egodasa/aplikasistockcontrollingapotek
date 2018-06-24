@@ -58,7 +58,7 @@ Partial Class Ftransaksi
         '
         'GroupBox4
         '
-        Me.GroupBox4.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox4.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox4.Controls.Add(Me.Lstok)
         Me.GroupBox4.Controls.Add(Me.Tjumlah)
         Me.GroupBox4.Controls.Add(Me.Label14)
@@ -261,7 +261,7 @@ Partial Class Ftransaksi
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.MintCream
+        Me.GroupBox1.BackColor = System.Drawing.Color.Honeydew
         Me.GroupBox1.Controls.Add(Me.Tkembalian)
         Me.GroupBox1.Controls.Add(Me.Bbatal)
         Me.GroupBox1.Controls.Add(Me.Label25)
@@ -330,7 +330,7 @@ Partial Class Ftransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(463, 523)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip1)
