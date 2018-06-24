@@ -7,7 +7,7 @@
         Cobat.SelectedIndex = -1
         Cpemasok.SelectedIndex = -1
         Tjumlah.ResetText()
-        Tharga.Clear()
+        Tharga.ResetText()
     End Sub
     Sub getPembelian()
         DGobat_beli.DataSource = fetchData("select * from laporan_detail_pembelian where id_pembelian = " & id_pembelian)
