@@ -37,6 +37,9 @@
     End Sub
 
     Private Sub DGobat_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGobat.CellDoubleClick
+        Tstok_ubah.Maximum = 1000000
+        Tstok_ubah.Minimum = -1000000
+        Tstok_ubah.Value = 0
         Tnm_obat.Text = DGobat.CurrentRow.Cells("Nama_Obat").Value
         Cjns_obat.Text = DGobat.CurrentRow.Cells("Jenis_Obat").Value
         Tstok.Value = DGobat.CurrentRow.Cells("Stok").Value
@@ -70,7 +73,7 @@
         runQuery("update tbl_obat set nm_obat = '" & Tnm_obat.Text &
                  "', id_jobat = " & Cjns_obat.SelectedValue &
                  ", hrg_obat = " & Thrg_obat.Text &
-                 ", stok = " & (Tstok.Value + Tstok_ubah.Value) &
+                 ", stok = " & Val(Tstok.Value + Tstok_ubah.Value) &
                  ", id_sat_obat = " & Csatuan.SelectedValue &
                  " where id_obat = " & DGobat.CurrentRow.Cells("Id_Obat").Value)
         Call editMessage()

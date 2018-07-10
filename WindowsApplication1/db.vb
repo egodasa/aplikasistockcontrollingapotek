@@ -8,7 +8,7 @@ Module db
     Public str As String
     Public username As String
     Public jenis_pengguna As String
-    Public _DIR As String = "F:\skripsitia\WindowsApplication1\"
+    Public _DIR As String = "F:\Program\visual_basic\skripsitia\WindowsApplication1\"
     Sub setKoneksi()
         str = "Server=192.168.56.1;uid=root;pwd=123456;database=db_apotek;port=3306"
         kon = New MySqlConnection(str)

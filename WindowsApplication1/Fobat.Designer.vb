@@ -92,8 +92,8 @@ Partial Class Fkelola_obat
         '
         Me.Tstok_ubah.Enabled = False
         Me.Tstok_ubah.Location = New System.Drawing.Point(467, 109)
-        Me.Tstok_ubah.Maximum = New Decimal(New Integer() {1874919424, 2328306, 0, 0})
-        Me.Tstok_ubah.Minimum = New Decimal(New Integer() {1569325056, 23283064, 0, -2147483648})
+        Me.Tstok_ubah.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
+        Me.Tstok_ubah.Minimum = New Decimal(New Integer() {100000000, 0, 0, -2147483648})
         Me.Tstok_ubah.Name = "Tstok_ubah"
         Me.Tstok_ubah.Size = New System.Drawing.Size(120, 23)
         Me.Tstok_ubah.TabIndex = 17
