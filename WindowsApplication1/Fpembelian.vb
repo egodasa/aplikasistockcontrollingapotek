@@ -89,6 +89,7 @@
         Cobat.SelectedIndex = -1
         Cpemasok.SelectedIndex = -1
         Tjumlah.ResetText()
+        Tharga.ResetText()
     End Sub
 
     Private Sub DaftarPembelianToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DaftarPembelianToolStripMenuItem.Click
