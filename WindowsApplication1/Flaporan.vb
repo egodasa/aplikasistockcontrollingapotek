@@ -31,7 +31,11 @@
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Flogin.Show()
+        If jenis_pengguna = "Admin" Then
+            Fmenu.Show()
+        Else
+            Flogin.Show()
+        End If
         Me.Close()
     End Sub
 End Class

@@ -32,6 +32,7 @@ Partial Class Fmenu
         Me.Bstok = New System.Windows.Forms.Button()
         Me.Beoq = New System.Windows.Forms.Button()
         Me.Bpengguna = New System.Windows.Forms.Button()
+        Me.Blaporan = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Bobat
@@ -56,7 +57,7 @@ Partial Class Fmenu
         Me.Btransaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btransaksi.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btransaksi.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btransaksi.Location = New System.Drawing.Point(12, 63)
+        Me.Btransaksi.Location = New System.Drawing.Point(199, 246)
         Me.Btransaksi.Name = "Btransaksi"
         Me.Btransaksi.Size = New System.Drawing.Size(167, 73)
         Me.Btransaksi.TabIndex = 2
@@ -86,7 +87,7 @@ Partial Class Fmenu
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button7.Location = New System.Drawing.Point(465, 196)
+        Me.Button7.Location = New System.Drawing.Point(465, 290)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(84, 30)
         Me.Button7.TabIndex = 6
@@ -141,7 +142,7 @@ Partial Class Fmenu
         Me.Beoq.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Beoq.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Beoq.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Beoq.Location = New System.Drawing.Point(199, 63)
+        Me.Beoq.Location = New System.Drawing.Point(12, 246)
         Me.Beoq.Name = "Beoq"
         Me.Beoq.Size = New System.Drawing.Size(167, 73)
         Me.Beoq.TabIndex = 10
@@ -156,7 +157,7 @@ Partial Class Fmenu
         Me.Bpengguna.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bpengguna.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bpengguna.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Bpengguna.Location = New System.Drawing.Point(12, 155)
+        Me.Bpengguna.Location = New System.Drawing.Point(12, 153)
         Me.Bpengguna.Name = "Bpengguna"
         Me.Bpengguna.Size = New System.Drawing.Size(167, 73)
         Me.Bpengguna.TabIndex = 11
@@ -164,12 +165,28 @@ Partial Class Fmenu
         Me.Bpengguna.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.Bpengguna.UseVisualStyleBackColor = False
         '
+        'Blaporan
+        '
+        Me.Blaporan.BackColor = System.Drawing.Color.OliveDrab
+        Me.Blaporan.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Blaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Blaporan.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Blaporan.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Blaporan.Location = New System.Drawing.Point(382, 155)
+        Me.Blaporan.Name = "Blaporan"
+        Me.Blaporan.Size = New System.Drawing.Size(167, 73)
+        Me.Blaporan.TabIndex = 12
+        Me.Blaporan.Text = "Data Laporan"
+        Me.Blaporan.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Blaporan.UseVisualStyleBackColor = False
+        '
         'Fmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Honeydew
-        Me.ClientSize = New System.Drawing.Size(561, 236)
+        Me.ClientSize = New System.Drawing.Size(561, 332)
+        Me.Controls.Add(Me.Blaporan)
         Me.Controls.Add(Me.Bpengguna)
         Me.Controls.Add(Me.Beoq)
         Me.Controls.Add(Me.Bstok)
@@ -195,4 +212,5 @@ Partial Class Fmenu
     Friend WithEvents Bstok As System.Windows.Forms.Button
     Friend WithEvents Beoq As System.Windows.Forms.Button
     Friend WithEvents Bpengguna As System.Windows.Forms.Button
+    Friend WithEvents Blaporan As System.Windows.Forms.Button
 End Class
