@@ -17,6 +17,7 @@
         DGobat_beli.Columns("Id_Transaksi").Visible = False
         DGobat_beli.Columns("Jumlah").ReadOnly = False
         Lstok.ResetText()
+        Lharga_obat.ResetText()
         If DGobat_beli.RowCount <> 0 Then
             For Each x As DataGridViewRow In DGobat_beli.Rows
                 If Not x.IsNewRow Then
@@ -79,6 +80,7 @@
     Private Sub Cobat_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cobat.SelectedIndexChanged
         If data_obat.Rows.Count <> 0 And Cobat.SelectedIndex <> -1 Then
             Lstok.Text = "Stok " & data_obat.Rows(Cobat.SelectedIndex).Item("Stok") & " " & data_obat.Rows(Cobat.SelectedIndex).Item("Satuan")
+            Lharga_obat.Text = "Harga " & Format(data_obat.Rows(Cobat.SelectedIndex).Item("Harga_Obat"), "Rp,   ##,##0")
             Tjumlah.Maximum = Val(data_obat.Rows(Cobat.SelectedIndex).Item("Stok"))
         End If
     End Sub
@@ -96,6 +98,7 @@
             data_obat = Cobat.DataSource
             Tjumlah.ResetText()
             Lstok.ResetText()
+            Lharga_obat.ResetText()
         End If
     End Sub
 
@@ -117,6 +120,7 @@
             Call fetchComboboxData("select * from daftar_obat", Cobat, "Nama_Obat", "Id_Obat")
             data_obat = Cobat.DataSource
             Lstok.ResetText()
+            Lharga_obat.ResetText()
         Catch ex As Exception
 
         End Try

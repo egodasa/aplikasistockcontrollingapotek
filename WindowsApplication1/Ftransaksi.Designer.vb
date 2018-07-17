@@ -48,6 +48,7 @@ Partial Class Ftransaksi
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Tdibayarkan = New System.Windows.Forms.NumericUpDown()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.Lharga_obat = New System.Windows.Forms.Label()
         Me.GroupBox4.SuspendLayout()
         CType(Me.Tjumlah, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGobat_beli, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +60,7 @@ Partial Class Ftransaksi
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.Honeydew
+        Me.GroupBox4.Controls.Add(Me.Lharga_obat)
         Me.GroupBox4.Controls.Add(Me.Lstok)
         Me.GroupBox4.Controls.Add(Me.Tjumlah)
         Me.GroupBox4.Controls.Add(Me.Label14)
@@ -79,17 +81,18 @@ Partial Class Ftransaksi
         '
         Me.Lstok.AutoSize = True
         Me.Lstok.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lstok.Location = New System.Drawing.Point(208, 51)
+        Me.Lstok.Location = New System.Drawing.Point(156, 50)
         Me.Lstok.Name = "Lstok"
-        Me.Lstok.Size = New System.Drawing.Size(0, 15)
+        Me.Lstok.Size = New System.Drawing.Size(118, 15)
         Me.Lstok.TabIndex = 33
+        Me.Lstok.Text = "                                     "
         '
         'Tjumlah
         '
         Me.Tjumlah.Location = New System.Drawing.Point(79, 48)
         Me.Tjumlah.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.Tjumlah.Name = "Tjumlah"
-        Me.Tjumlah.Size = New System.Drawing.Size(118, 23)
+        Me.Tjumlah.Size = New System.Drawing.Size(57, 23)
         Me.Tjumlah.TabIndex = 32
         '
         'Label14
@@ -326,6 +329,16 @@ Partial Class Ftransaksi
         Me.Label26.TabIndex = 16
         Me.Label26.Text = "Dibayar"
         '
+        'Lharga_obat
+        '
+        Me.Lharga_obat.AutoSize = True
+        Me.Lharga_obat.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lharga_obat.Location = New System.Drawing.Point(300, 50)
+        Me.Lharga_obat.Name = "Lharga_obat"
+        Me.Lharga_obat.Size = New System.Drawing.Size(118, 15)
+        Me.Lharga_obat.TabIndex = 34
+        Me.Lharga_obat.Text = "                                     "
+        '
         'Ftransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,4 +390,5 @@ Partial Class Ftransaksi
     Friend WithEvents Tdibayarkan As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents DaftarTransaksiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Lharga_obat As System.Windows.Forms.Label
 End Class
